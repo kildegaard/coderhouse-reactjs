@@ -1,0 +1,11 @@
+.cart-widget {
+    background-color: #202020;
+    color: #cacaca;
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+}
