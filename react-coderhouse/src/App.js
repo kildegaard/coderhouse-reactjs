@@ -3,13 +3,12 @@ import { NavBar } from './components/NavBar/NavBar';
 
 function App() {
 
-  const greeting = 'Holiiii'
+  const greeting = 'Welcome to the first version of React Js Course!';
 
   return (
     <>
       <div>
         <NavBar />
-        {/* <ItemListContainer saludo='Hola Mundo' /> */}
         <ItemListContainer saludo={greeting} />
       </div>
     </>
