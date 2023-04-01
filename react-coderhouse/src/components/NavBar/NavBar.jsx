@@ -7,9 +7,9 @@ export const NavBar = () => {
         <div className='menu'>
             <ul className='links'>
                 <li className='fs-1'><a href="#">E-commerce</a></li>
-                <li><a href="#">Enlace 1</a></li>
-                <li><a href="#">Enlace 2</a></li>
-                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#" className='btn btn-secondary opacity-75'>Enlace 1</a></li>
+                <li><a href="#" className='btn btn-secondary opacity-75'>Enlace 2</a></li>
+                <li><a href="#" className='btn btn-secondary opacity-75'>Enlace 3</a></li>
             </ul>
 
             <CartWidget />
