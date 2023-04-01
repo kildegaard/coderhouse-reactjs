@@ -4,8 +4,17 @@
     width: 50px;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 
     border-radius: 20px;
+
+    padding: 10px;
+}
+
+.cart-widget p {
+    margin: 0;
+    font-family: serif;
+    font-size: 1.1em;
 }
