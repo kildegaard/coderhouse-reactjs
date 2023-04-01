@@ -1,0 +1,9 @@
+h4 {
+    text-align: center;
+}
+
+.counter-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
