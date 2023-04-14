@@ -4,12 +4,13 @@ import { Container } from './components/Container/Container';
 
 function App() {
 
-  const greeting = 'Welcome to the first version of React Js Course!';
+  const greeting1 = 'Welcome to the first version of React Js Course!';
+  const greeting2 = 'Bienvenido a la primera versión del curso de React Js!';
 
   return (
     <>
       <NavBar />
-      <ItemListContainer saludo={greeting} />
+      <ItemListContainer saludo1={greeting1} saludo2={greeting2} />
       <Container />
     </>
   )
