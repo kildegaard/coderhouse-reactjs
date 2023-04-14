@@ -1,4 +1,4 @@
-[
+export const usuarios = [
     {
         "id": 1,
         "name": "Juan",
@@ -15,3 +15,4 @@
         "age": 22
     }
 ]
+
