@@ -12,9 +12,6 @@ import {
 
 function App() {
 
-  const greeting1 = 'Welcome to the first version of React Js Course!';
-  const greeting2 = 'Bienvenido a la primera versión del curso de React Js!';
-
   return (
 
     <div className="App">

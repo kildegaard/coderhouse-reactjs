@@ -11,7 +11,7 @@ export const stock = [
         description: 'Televisor',
         price: 352,
         image: 'https://picsum.photos/id/237/200/300',
-        category: 'electrodoméstico'
+        category: 'electrodomésticos'
     },
     {
         id: 3,
@@ -32,13 +32,13 @@ export const stock = [
         description: 'Celular',
         price: 352,
         image: 'https://picsum.photos/id/237/200/300?grayscale',
-        category: 'electrodoméstico'
+        category: 'electrodomésticos'
     },
     {
         id: 6,
         description: 'Microondas',
         price: 200,
         mage: 'https://picsum.photos/200/300?grayscale&blur',
-        category: 'electrodoméstico'
+        category: 'electrodomésticos'
     }
 ]
