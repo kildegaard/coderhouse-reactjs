@@ -1,4 +1,4 @@
-const stock = [
+export const stock = [
     {
         id: 1,
         description: 'Pantalón',

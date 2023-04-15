@@ -1,0 +1,9 @@
+.item-box {
+    width: 300px;
+    border: 2px solid white;
+    text-align: left;
+}
+
+ul li {
+    list-style: none;
+}
