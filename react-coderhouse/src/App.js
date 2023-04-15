@@ -1,6 +1,12 @@
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { NavBar } from './components/NavBar/NavBar';
 import { Container } from './components/Container/Container';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Navigate,
+  Route
+} from "react-router-dom";
 
 function App() {
 
@@ -8,11 +14,21 @@ function App() {
   const greeting2 = 'Bienvenido a la primera versión del curso de React Js!';
 
   return (
-    <>
-      <NavBar />
-      <ItemListContainer saludo1={greeting1} saludo2={greeting2} />
-      <Container />
-    </>
+    // <>
+    //   <NavBar />
+    //   <ItemListContainer saludo1={greeting1} saludo2={greeting2} />
+    //   <Container />
+    // </>
+
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          {/* <Route path='/counter' element={<ItemCount />} /> */}
+          {/* <Route path='/Pika' element={<Pika />} /> */}
+        </Routes>
+      </Router>
+    </div>
   )
 }
 
