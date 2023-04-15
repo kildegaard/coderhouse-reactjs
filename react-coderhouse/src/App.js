@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
           <Route path='/productos/:categoryId' element={<ItemListContainer />} />
-          {/* <Route path='/detail/:itemId' element={<ItemDetailContainer />} /> */}
+          <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
           <Route path='/counter' element={<ItemCount />} />
           <Route path='/Pika' element={<Pika />} />
           <Route path='*' element={<Navigate to='/' />} /> // Esto es para que si no encuentra la ruta, redirija a la ruta principal

@@ -1,30 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import { pedirProductos } from '../../helpers/pedirProductos'
-import { ImSpinner3 } from 'react-icons'
+import { ImSpinner3 } from 'react-icons/im'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
+import { useParams } from 'react-router-dom'
 
 export const ItemDetailContainer = () => {
 
     const [item, setItem] = useState(null)
+
     const [loading, setLoading] = useState(false)
+
+    const { itemId } = useParams()
 
     useEffect(() => {
         setLoading(true)
         pedirProductos()
             .then((res) => {
-                setItem(res)
-                console.log(res)
+                setItem(res.find((prod) => prod.id === Number(itemId))) // Busco el producto por id y lo guardo en el estado item
             })
             .catch((err) => console.log(err))
             .finally(() => setLoading(false))
-    }, [])
+    }, [itemId])
 
     return (
         <section>
             {loading ? (
-                <p>Cargando...</p>
+                <>
+                    <h3>Cargando...</h3>
+                    <ImSpinner3 />
+                </>
             ) : (
-                <ItemDetail />
+                <ItemDetail {...item} /> // Le paso el item al componente ItemDetail como props
             )}
         </section>
     )
