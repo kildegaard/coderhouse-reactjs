@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './ItemListContainer.css'
 import { pedirProductos } from '../../helpers/pedirProductos'
 import { ItemList } from '../ItemList/ItemList'
+import { ImSpinner3 } from 'react-icons/im'
 
 export const ItemListContainer = (props) => {
     // Probando el formato de props
@@ -24,7 +25,8 @@ export const ItemListContainer = (props) => {
     return (
         <div className='ItemListContainer'>
             {loading ? (
-                <h3>Cargando...</h3>
+                // <h3>Cargando...</h3>
+                <ImSpinner3 />
             ) : (
                 <ItemList productos={items} />
             )}
