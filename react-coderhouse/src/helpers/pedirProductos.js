@@ -5,6 +5,6 @@ export const pedirProductos = () => {
         setTimeout(() => {
             resolve(stock)
             reject('Error al obtener los productos')
-        }, 2000)
+        }, 500)
     })
 }
