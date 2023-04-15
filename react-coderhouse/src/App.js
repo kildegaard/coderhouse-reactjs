@@ -20,7 +20,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
-          <Route path='/productos/:category' element={<ItemListContainer />} />
+          <Route path='/productos/:categoryId' element={<ItemListContainer />} />
           {/* <Route path='/detail/:itemId' element={<ItemDetailContainer />} /> */}
           <Route path='/counter' element={<ItemCount />} />
           <Route path='/Pika' element={<Pika />} />

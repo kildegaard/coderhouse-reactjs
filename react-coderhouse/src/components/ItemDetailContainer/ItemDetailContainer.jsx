@@ -24,7 +24,7 @@ export const ItemDetailContainer = () => {
             {loading ? (
                 <p>Cargando...</p>
             ) : (
-                <p>Cargado!</p>
+                <ItemDetail />
             )}
         </section>
     )
