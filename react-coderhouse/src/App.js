@@ -1,6 +1,8 @@
+import { ItemCount } from './components/ItemCount/ItemCount';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { NavBar } from './components/NavBar/NavBar';
 import { Container } from './components/Container/Container';
+import { Pika } from './components/Pika/Pika';
 
 function App() {
 
@@ -10,8 +12,9 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer saludo1={greeting1} saludo2={greeting2} />
-      <Container />
+      <ItemListContainer saludo={greeting1} />
+      <ItemCount />
+      <Pika />
     </>
   )
 }
