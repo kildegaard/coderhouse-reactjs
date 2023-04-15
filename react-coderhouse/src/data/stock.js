@@ -13,7 +13,7 @@ export const stock = [
     },
     {
         id: 3,
-        description: 'Romero',
+        description: 'Zapatilla',
         price: 200,
         image: 'https://picsum.photos/200/300?grayscale'
     },
