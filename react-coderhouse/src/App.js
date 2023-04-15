@@ -22,6 +22,8 @@ function App() {
 
     <div className="App">
       <Router>
+        {/* Todos los componentes que estén dentro de Router se van a poder ver en todas las rutas */}
+        <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
           {/* <Route path='/counter' element={<ItemCount />} /> */}
