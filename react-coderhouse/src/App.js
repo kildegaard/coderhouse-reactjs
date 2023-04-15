@@ -16,11 +16,6 @@ function App() {
   const greeting2 = 'Bienvenido a la primera versión del curso de React Js!';
 
   return (
-    // <>
-    //   <NavBar />
-    //   <ItemListContainer saludo1={greeting1} saludo2={greeting2} />
-    //   <Container />
-    // </>
 
     <div className="App">
       <Router>
