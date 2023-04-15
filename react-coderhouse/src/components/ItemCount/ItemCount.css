@@ -6,4 +6,6 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+    margin: 10px;
 }

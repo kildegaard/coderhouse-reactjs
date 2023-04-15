@@ -14,7 +14,7 @@ export const ItemListContainer = (props) => {
     const [loading, setLoading] = useState(false)
 
     // Desestructuración de la variable param para obtener el valor de categoryId
-    const { categoryId } = useParams()
+    const { categoryId } = useParams() // los Params son los valores que se pasan por la URL anteponiendo ':' a la variable
 
     useEffect(() => {
         setLoading(true)
