@@ -1,3 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 import { ItemCount } from './components/ItemCount/ItemCount';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { NavBar } from './components/NavBar/NavBar';

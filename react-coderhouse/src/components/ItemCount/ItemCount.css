@@ -6,6 +6,12 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
     margin: 10px;
+}
+
+.counter-btns button {
+    border-radius: 20px;
+    padding: 5px;
+    background-color: lightblue;
 }

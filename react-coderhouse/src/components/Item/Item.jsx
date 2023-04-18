@@ -1,20 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './item.css'
+import { Card } from 'react-bootstrap'
 
 export const Item = (props) => {
     return (
-        <div className='item-box'>
-            <h3>Item</h3>
-            <ul>
-                <li>Id: {props.id}</li>
-                <li>Desc: {props.description}</li>
-                <li>Price: {props.price}</li>
-                <li>Categoría: {props.category}</li>
-                <hr />
+        <>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant='top' src={props.image} />
+                <Card.Body className='text-center'>
+                    <Card.Title>Id: {props.id}</Card.Title>
+                    <Card.Text>Descripción: {props.description}</Card.Text>
+                    <Card.Text>Precio: ${props.price}</Card.Text>
+                    <Card.Text>Categoría: {props.category}</Card.Text>
 
-                <Link to={`/detail/${props.id}`}><button>Ver más detalles</button></Link>
-            </ul>
-        </div>
+                    <Link to={`/detail/${props.id}`} className='btn btn-primary'>Ver más!</Link>
+                </Card.Body>
+
+            </Card>
+        </>
     )
 }
