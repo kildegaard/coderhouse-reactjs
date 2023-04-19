@@ -3,6 +3,7 @@ import { pedirProductos } from '../../helpers/pedirProductos'
 import { ImSpinner3 } from 'react-icons/im'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
+import './ItemDetailContainer.css'
 
 export const ItemDetailContainer = () => {
 
@@ -23,7 +24,7 @@ export const ItemDetailContainer = () => {
     }, [itemId])
 
     return (
-        <section>
+        <section className='item-detail'>
             {loading ? (
                 <>
                     <h3>Cargando...</h3>

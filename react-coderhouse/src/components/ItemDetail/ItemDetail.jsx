@@ -7,12 +7,13 @@ export const ItemDetail = (props) => {
     return (
         <>
             <Card style={{
-                width: '18rem',
-                margin: '20px auto',
-                padding: '10px',
+                width: '25rem',
+                margin: '50px auto',
+                padding: '30px',
                 backgroundColor: '#BABABA'
             }}>
                 <Card.Title className='fs-1 text-center'>{props.description}</Card.Title>
+                <hr />
                 <Card.Img variant='top' src={props.image} />
                 <Card.Body className='text-center'>
                     <hr />
