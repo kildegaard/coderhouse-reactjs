@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+import { Footer } from './components/Footer/Footer'
 
 import { ItemCount } from './components/ItemCount/ItemCount';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
@@ -31,6 +31,7 @@ function App() {
           <Route path='/Pika' element={<Pika />} /> {/* Este componente no tiene nada que ver con el proyecto, es solo para probar que funciona el router */}
           <Route path='*' element={<Navigate to='/' />} /> {/* Esto es para que si no encuentra la ruta, redirija a la ruta principal */}
         </Routes>
+        <Footer />
       </Router>
     </div>
   )
