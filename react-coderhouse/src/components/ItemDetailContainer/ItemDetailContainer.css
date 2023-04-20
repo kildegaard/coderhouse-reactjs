@@ -1,3 +1,6 @@
 .item-detail {
-    height: 120vh;
+    padding: 15px;
+    margin-bottom: 110px;
+    background-color: #272c31;
+    height: 105vh;
 }
