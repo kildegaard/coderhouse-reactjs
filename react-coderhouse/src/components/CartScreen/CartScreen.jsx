@@ -12,8 +12,8 @@ export const CartScreen = () => {
     return (
         <div className='container' >
             {
-                cart.map((prod) => {
-                    <div className='cart-container my-5 text-center'>
+                cart.map((prod) => (
+                    < div className='cart-container my-5 text-center' >
                         <h3>Carrito de compras</h3>
                         <hr />
                         <div className='cart-items'>
@@ -25,11 +25,12 @@ export const CartScreen = () => {
                             </Button>
                         </div>
                     </div>
-                })
+                ))
             }
+            <hr />
             <strong>Total: $ {precioTotal()}</strong>
             <Button className='btn btn-danger' onClick={() => vaciarCarrito()}>Vaciar carrito</Button>
-        </div>
+        </div >
 
     )
 }
