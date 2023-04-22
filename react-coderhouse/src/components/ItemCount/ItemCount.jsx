@@ -22,8 +22,8 @@ export const ItemCount = () => {
             <h4>Cantidad: {counter}</h4>
             <div className='counter-btns'>
                 <button onClick={sumar}>➕</button>
-                {counter === 0 ? <button disabled>➖</button> : <button onClick={restar}>➖</button>}
-                <button onClick={reset}>🔄</button>
+                {counter === 0 ? <button style={{ opacity: '0.5' }}>➖</button> : <button onClick={restar}>➖</button>}
+                {/* <button onClick={reset}>🔄</button> */}
             </div>
         </>
     )
