@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
 import './ItemCount.css';
 
-export const ItemCount = () => {
+export const ItemCount = ({ max, cant, modify }) => {
 
-    const [counter, setCounter] = useState(0);
+    // const [counter, setCounter] = useState(0);
 
     const sumar = () => {
-        setCounter(counter + 1);
+        if (cant < max) {
+            modify(cant + 1);
+        }
     }
     const restar = () => {
-        if (counter > 0) {
-            setCounter(counter - 1);
+        if (cant > 0) {
+            modify(cant - 1);
         }
     }
     const reset = () => {
-        setCounter(0);
+        modify(0);
     }
 
     return (
         <>
-            <h4>Cantidad: {counter}</h4>
+            <h4>Cantidad: {cant}</h4>
             <div className='counter-btns'>
                 <button onClick={sumar}>➕</button>
-                {counter === 0 ? <button style={{ opacity: '0.5' }}>➖</button> : <button onClick={restar}>➖</button>}
+                {cant === 0 ? <button style={{ opacity: '0.5' }}>➖</button> : <button onClick={restar}>➖</button>}
                 {/* <button onClick={reset}>🔄</button> */}
             </div>
         </>

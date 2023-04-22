@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { Card } from 'react-bootstrap'
@@ -11,6 +11,9 @@ export const ItemDetail = (props) => {
     const volverHaciaAtras = () => {
         navigate(-1)
     }
+
+    const [counter, setCounter] = useState(0);
+
 
     return (
         <>
@@ -29,7 +32,7 @@ export const ItemDetail = (props) => {
                     <hr />
                     <Card.Text className='fs-2 border border-4 border-info-subtle rounded-pill'>Precio: ${props.price}</Card.Text>
 
-                    < ItemCount />
+                    < ItemCount max={props.stock} modify={setCounter} cant={counter} />
                     <Link to={`/detail/${props.id}`} className='btn btn-success'>Agregar al carrito</Link>
                     <hr />
                     <button className='btn btn-secondary' onClick={volverHaciaAtras}>Volver</button>
