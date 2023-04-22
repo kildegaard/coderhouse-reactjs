@@ -14,39 +14,13 @@ import {
   Navigate,
   Route
 } from "react-router-dom";
-import { CartContext } from './components/context/CartContext';
-import { useState } from 'react';
+import { CartProvider } from './components/context/CartContext';
 import { CartScreen } from './components/CartScreen/CartScreen';
 
 function App() {
 
-  const [cart, setCart] = useState([])
-
-  console.log(cart)
-
-  const addToCart = (item) => {
-    setCart([...cart, item])
-  }
-
-  const calcularCantidad = () => {
-    return cart.reduce((acum, item) => acum + item.counter, 0)
-  }
-
-  const precioTotal = () => {
-    return cart.reduce((acum, item) => acum + item.counter * item.price, 0)
-  }
-
-  const removerItem = (id) => {
-    const newCart = cart.filter((item) => item.id !== id)
-    setCart(newCart)
-  }
-
-  const vaciarCarrito = () => {
-    setCart([])
-  }
-
   return (
-    <CartContext.Provider value={{ cart, addToCart, calcularCantidad, precioTotal, removerItem, vaciarCarrito }}>
+    <CartProvider>
       <div className="App">
         <Router>
           {/* Todos los componentes que estén dentro de Router se van a poder ver en todas las rutas */}
@@ -63,7 +37,7 @@ function App() {
           <Footer />
         </Router>
       </div>
-    </CartContext.Provider>
+    </CartProvider>
   )
 }
 
