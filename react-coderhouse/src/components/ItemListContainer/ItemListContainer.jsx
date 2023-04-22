@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { pedirProductos } from '../../helpers/pedirProductos'
 import { ItemList } from '../ItemList/ItemList'
 import { ImSpinner3 } from 'react-icons/im'
 import './ItemListContainer.css'
+import { UIContext } from '../context/UIcontext'
 
 export const ItemListContainer = (props) => {
     // Probando el formato de props
@@ -11,7 +12,7 @@ export const ItemListContainer = (props) => {
 
     const [items, setItems] = useState([])
 
-    const [loading, setLoading] = useState(false)
+    const { loading, setLoading } = useContext(UIContext)
 
     // Desestructuración de la variable param para obtener el valor de categoryId
     const { categoryId } = useParams() // los Params son los valores que se pasan por la URL anteponiendo ':' a la variable

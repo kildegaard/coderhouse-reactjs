@@ -16,28 +16,31 @@ import {
 } from "react-router-dom";
 import { CartProvider } from './components/context/CartContext';
 import { CartScreen } from './components/CartScreen/CartScreen';
+import { UIProvider } from './components/context/UIcontext';
 
 function App() {
 
   return (
-    <CartProvider>
-      <div className="App">
-        <Router>
-          {/* Todos los componentes que estén dentro de Router se van a poder ver en todas las rutas */}
-          <NavBar />
-          <Routes>
-            <Route path='/' element={<ItemListContainer />} />
-            <Route path='/productos/:categoryId' element={<ItemListContainer />} />
-            <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
-            <Route path='/counter' element={<ItemCount />} />
-            <Route path='/Pika' element={<Pika />} /> {/* Este componente no tiene nada que ver con el proyecto, es solo para probar que funciona el router */}
-            <Route path='*' element={<Navigate to='/' />} /> {/* Esto es para que si no encuentra la ruta, redirija a la ruta principal */}
-            <Route path='/cart' element={<CartScreen />} />
-          </Routes>
-          <Footer />
-        </Router>
-      </div>
-    </CartProvider>
+    <UIProvider>
+      <CartProvider>
+        <div className="App">
+          <Router>
+            {/* Todos los componentes que estén dentro de Router se van a poder ver en todas las rutas */}
+            <NavBar />
+            <Routes>
+              <Route path='/' element={<ItemListContainer />} />
+              <Route path='/productos/:categoryId' element={<ItemListContainer />} />
+              <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
+              <Route path='/counter' element={<ItemCount />} />
+              <Route path='/Pika' element={<Pika />} /> {/* Este componente no tiene nada que ver con el proyecto, es solo para probar que funciona el router */}
+              <Route path='*' element={<Navigate to='/' />} /> {/* Esto es para que si no encuentra la ruta, redirija a la ruta principal */}
+              <Route path='/cart' element={<CartScreen />} />
+            </Routes>
+            <Footer />
+          </Router>
+        </div>
+      </CartProvider>
+    </UIProvider>
   )
 }
 
