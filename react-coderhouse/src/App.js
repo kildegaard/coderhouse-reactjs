@@ -23,12 +23,16 @@ function App() {
 
   console.log(cart)
 
-  const addToCart = (item, quantity) => {
+  const addToCart = (item) => {
     setCart([...cart, item])
   }
 
+  const calcularCantidad = () => {
+    return cart.reduce((acum, item) => acum + item.counter, 0)
+  }
+
   return (
-    <CartContext.Provider value={{ addToCart }}>
+    <CartContext.Provider value={{ addToCart, calcularCantidad }}>
       <div className="App">
         <Router>
           {/* Todos los componentes que estén dentro de Router se van a poder ver en todas las rutas */}
