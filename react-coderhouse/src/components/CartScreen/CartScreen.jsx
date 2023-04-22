@@ -5,7 +5,7 @@ import { BsTrash } from 'react-icons/bs'
 
 export const CartScreen = () => {
     return (
-        <div className='cart-container my-5'>
+        <div className='cart-container my-5 text-center'>
             <h3>Carrito de compras</h3>
             <hr />
             <div className='cart-items'>
