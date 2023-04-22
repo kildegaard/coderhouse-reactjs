@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { Card } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
+import { useContext } from 'react'
 
 export const ItemDetail = ({ id, description, price, image, category, stock }) => {
 
@@ -11,6 +13,10 @@ export const ItemDetail = ({ id, description, price, image, category, stock }) =
     const volverHaciaAtras = () => {
         navigate(-1)
     }
+
+    // #############################  Contexto  #############################
+    const { addToCart } = useContext(CartContext)
+
 
     const [counter, setCounter] = useState(0);
 
@@ -24,6 +30,7 @@ export const ItemDetail = ({ id, description, price, image, category, stock }) =
             counter
         }
         console.log(newItem)
+        addToCart(newItem)
     }
 
 
@@ -40,7 +47,8 @@ export const ItemDetail = ({ id, description, price, image, category, stock }) =
                 <Card.Img variant='top' src={image} />
                 <Card.Body className='text-center'>
                     <hr />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odio tenetur qui cum iusto placeat unde aut sapiente delectus numquam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odio
+                        tenetur qui cum iusto placeat unde aut sapiente delectus numquam.</p>
                     <hr />
                     <Card.Text className='fs-2 border border-4 border-info-subtle rounded-pill'>Precio: ${price}</Card.Text>
 
