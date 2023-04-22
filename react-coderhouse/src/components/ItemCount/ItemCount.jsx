@@ -24,7 +24,7 @@ export const ItemCount = ({ max, cant, modify }) => {
             <div className='counter-btns'>
                 <button onClick={sumar}>➕</button>
                 {cant === 0 ? <button style={{ opacity: '0.5' }}>➖</button> : <button onClick={restar}>➖</button>}
-                {/* <button onClick={reset}>🔄</button> */}
+                <button onClick={reset}>🔄</button>
             </div>
         </>
     )
