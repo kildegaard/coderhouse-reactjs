@@ -32,7 +32,7 @@ export const ItemDetail = (props) => {
                     < ItemCount />
                     <Link to={`/detail/${props.id}`} className='btn btn-success'>Agregar al carrito</Link>
                     <hr />
-                    <button className='btn btn-danger' onClick={volverHaciaAtras}>Volver</button>
+                    <button className='btn btn-secondary' onClick={volverHaciaAtras}>Volver</button>
                 </Card.Body>
 
             </Card>
